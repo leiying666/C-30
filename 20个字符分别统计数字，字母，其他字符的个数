@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<windows.h>
+int main()
+{
+	char input[20] = { 0 };
+	int a=0, b=0, c=0,i;
+	printf("请输入20个字符：\n");
+	scanf("%s", input);
+	for (i = 0; i < 20; i++)
+	{
+		if (input[i] >= 48 && input[i] <= 57)
+			a++;
+		else if ((input[i] >= 65 && input[i] <= 90) || (input[i] >= 97 && input[i] <= 122))
+			b++;
+		else
+			c++;
+	}
+	printf("数字字符的个数为%d\n", a);
+	printf("字母字符的个数为%d\n", b);
+	printf("其他字符的个数为%d\n", c);
+    return 0;
+}
